@@ -1,22 +1,8 @@
--- Install the lazy package manager
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
-end
-vim.opt.rtp:prepend(lazypath)
-
--- Load plugins
-require("lazy").setup({
+local plugins = {
     "nvim-tree/nvim-web-devicons",
 	"mbbill/undotree", -- Undotree
 	"tpope/vim-fugitive", -- Git Integration
+    
 	{
 		"folke/which-key.nvim", -- Helper: Overview der einzelnen verfügbaren keys bei <leader> etc.
 		event = "VeryLazy",
@@ -37,7 +23,6 @@ require("lazy").setup({
 		priority = 1000,
 		opts = {},
 	},
-	{ 'feline-nvim/feline.nvim', branch = '0.5-compat' }, -- Pretty status line
 	{
 		"nvim-treesitter/nvim-treesitter", -- Highlight, edit, and navigate code
 		dependencies = {
@@ -45,6 +30,7 @@ require("lazy").setup({
 		},
 		build = ":TSUpdate",
 	},
+	
 	-- LSP Configuration
 	{'williamboman/mason.nvim'},
 	{'williamboman/mason-lspconfig.nvim'},
@@ -55,6 +41,5 @@ require("lazy").setup({
 	{'L3MON4D3/LuaSnip'},
 	---------------------
 	
-
-	
-})
+}
+return plugins
