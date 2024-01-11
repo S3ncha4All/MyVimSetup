@@ -1,2 +1,3 @@
-# MyVimSetup
-My personal Vim Setup
+My Vim Setup
+
+
