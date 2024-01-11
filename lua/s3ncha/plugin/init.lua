@@ -13,5 +13,5 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Load plugins
-local plugins = require("plugins")
+local plugins = require("s3ncha.plugin.plugins")
 require("lazy").setup(plugins)
