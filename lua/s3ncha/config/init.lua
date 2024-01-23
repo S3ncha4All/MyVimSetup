@@ -1,6 +1,0 @@
-require("s3ncha.config.undotree")
-require("s3ncha.config.fugitive")
-require("s3ncha.config.telescope")
-require("s3ncha.config.fugitive")
-require("s3ncha.config.treesitter")
-require("s3ncha.config.lsp")
