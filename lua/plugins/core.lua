@@ -128,4 +128,8 @@ return {
       float_opts = { border = "rounded" },
     },
   },
+  {
+    "AstroNvim/astrocommunity",
+    { import = "astrocommunity.colorscheme.everforest" }
+  }
 }
