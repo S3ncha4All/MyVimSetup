@@ -47,3 +47,8 @@ tags
 
 # JetBrains
 .idea
+
+# Common
+.lazy-lock.json
+.lazyvim.json
+
