@@ -27,6 +27,7 @@ return {
 			"vimdoc",
 			"yaml",
 			"elixir",
+			"java",
 		},
 	},
 }
