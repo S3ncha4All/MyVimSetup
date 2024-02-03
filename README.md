@@ -5,7 +5,7 @@ The setup is not yet completed. (Its a journey)
 
 
 ## Further steps to do
+- refactor the defaukt example.lua
 - Keymappings
 - more colorthemes
 - telescope customizing
-- 
