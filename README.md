@@ -1,4 +1,11 @@
-# 💤 LazyVim
+# My personal NeoVim - setup
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+Its based on lazy and uses my personal settings and preferences. I use it in an Ubuntu-Terminal with WSL.
+The setup is not yet completed. (Its a journey)
+
+
+## Further steps to do
+- Keymappings
+- more colorthemes
+- telescope customizing
+- 
