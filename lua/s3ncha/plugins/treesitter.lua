@@ -28,6 +28,7 @@ return {
 			"yaml",
 			"elixir",
 			"java",
+			"zig",
 		},
 	},
 }
