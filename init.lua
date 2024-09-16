@@ -1,3 +1,2 @@
-require("s3ncha.settings")
-require("s3ncha.lazy")
-require("s3ncha.keymaps")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
