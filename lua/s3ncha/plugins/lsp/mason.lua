@@ -10,6 +10,8 @@ return {
 		require("mason-lspconfig").setup({
 			automatic_installation = true,
 			ensure_installed = {
+				"zls",
+				"jdtls",
 				"lua_ls",
 				"cssls",
 				"eslint",
@@ -25,6 +27,8 @@ return {
 				"prettier",
 				"stylua", -- lua formatter
 				"eslint_d",
+				"java-debug-adapter",
+				"java-test",
 			},
 		})
 	end,

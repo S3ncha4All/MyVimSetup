@@ -1,7 +1,10 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
+	event = { "BufReadPre", "BufNewFile" },
 	build = ":TSUpdate",
-	main = "nvim-treesitter.configs",
+	dependencies = {
+		"windwp/nvim-ts-autotag",
+	},
 	opts = {
 		ensure_installed = {
 			"json",
@@ -28,7 +31,6 @@ return {
 		auto_install = true,
 		highlight = {
 			enable = true,
-			additional_vim_regex_highlighting = {},
 		},
 		indent = {
 			enable = true,
