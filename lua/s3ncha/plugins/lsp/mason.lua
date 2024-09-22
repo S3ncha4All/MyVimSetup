@@ -11,7 +11,6 @@ return {
 			automatic_installation = true,
 			ensure_installed = {
 				"zls",
-				"jdtls",
 				"lua_ls",
 				"cssls",
 				"eslint",

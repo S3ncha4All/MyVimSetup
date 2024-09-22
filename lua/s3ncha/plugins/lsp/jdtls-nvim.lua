@@ -157,7 +157,7 @@ return {
 						},
 					})
 
-					if opts.dap and LazyVim.has("nvim-dap") and mason_registry.is_installed("java-debug-adapter") then
+					if opts.dap and mason_registry.is_installed("java-debug-adapter") then
 						-- custom init for Java debugger
 						require("jdtls").setup_dap(opts.dap)
 						require("jdtls.dap").setup_dap_main_class_configs(opts.dap_main)
