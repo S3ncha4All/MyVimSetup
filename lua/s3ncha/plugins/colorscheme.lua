@@ -1,16 +1,14 @@
 return {
-	{
-		"tiagovla/tokyodark.nvim",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			vim.cmd("colorscheme tokyodark")
-		end,
-	},
-	{
-		"norcalli/nvim-colorizer.lua",
-		config = function()
-			require("colorizer").setup({ "*" })
-		end,
-	},
+	"neanias/everforest-nvim",
+	version = false,
+	lazy = false,
+	priority = 1000, -- make sure to load this before all the other start plugins
+	-- Optional; default configuration will be used if setup isn't called.
+	config = function()
+		require("everforest").setup({
+			-- Your config here
+			background = "hard",
+			transparent_background_level = 2,
+		})
+	end,
 }
