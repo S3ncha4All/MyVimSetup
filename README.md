@@ -8,6 +8,7 @@ The setup is not yet completed. (Its a journey)
 - Keymappings
 - telescope customizing
 - Structure Plugins
+- More LS (Typescript, Javascript, ZIG, Elixir)
 
 ## Plugins
 
