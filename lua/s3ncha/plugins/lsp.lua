@@ -1,9 +1,87 @@
 return {
-	--require("s3ncha.plugins.lsp.lazydev"),
-	--require("s3ncha.plugins.lsp.mason"),
-	--require("s3ncha.plugins.lsp.conform"),
-	--require("s3ncha.plugins.lsp.dap"),
-	--require("s3ncha.plugins.lsp.jdtls-nvim"),
-	--require("s3ncha.plugins.lsp.nvim-java"),
-	--require("s3ncha.plugins.lsp.lspconfig"),
+  {
+    "folke/lazydev.nvim",
+    ft = "lua",
+    opts = {
+      library = {
+        { path = "luvit-meta/library", words = { "vim%.uv" } },
+      },
+    },
+  },
+  { "Bilal2453/luvit-meta",      lazy = true },
+  { "VonHeikemen/lsp-zero.nvim", branch = "v4.x" },
+  {
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    config = function()
+      require("mason-tool-installer").setup({
+        ensure_installed = {
+          "java-test",
+          "java-debug-adapter",
+        },
+      })
+    end
+  },
+  {
+    "williamboman/mason.nvim",
+    config = function()
+      require("mason").setup()
+    end
+  },
+  {
+    "williamboman/mason-lspconfig.nvim",
+    config = function()
+      require("mason-lspconfig").setup({
+        ensure_installed = {
+          "lua_ls",
+        },
+        handlers = {
+          function(server_name)
+            require("lspconfig")[server_name].setup({})
+          end,
+          jdtls = function() end,
+        }
+      })
+    end
+  },
+  { "neovim/nvim-lspconfig" },
+  { "hrsh7th/cmp-nvim-lsp" },
+  { "hrsh7th/cmp-buffer" },
+  { "hrsh7th/cmp-path" },
+  { "hrsh7th/cmp-cmdline" },
+  {
+    "hrsh7th/nvim-cmp",
+    config = function()
+      local cmp = require("cmp")
+      -- `:` cmdline setup.
+      cmp.setup.cmdline(':', {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = cmp.config.sources({
+          { name = 'path' }
+        }, {
+          {
+            name = 'cmdline',
+            option = {
+              ignore_cmds = { 'Man', '!' }
+            }
+          }
+        })
+      })
+      cmp.setup({
+        sources = {
+          { name = 'nvim_lsp' },
+          { name = 'buffer' },
+          { name = 'path' },
+        },
+        snippet = {
+          expand = function(args)
+            vim.snippet.expand(args.body) --requires NeoVIM 10.0.0
+          end,
+        },
+        mapping = cmp.mapping.preset.insert({
+          ['<CR>'] = cmp.mapping.confirm({ select = false }),
+        }),
+      })
+    end,
+  },
+
 }
