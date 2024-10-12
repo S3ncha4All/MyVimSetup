@@ -8,8 +8,22 @@ return {
       },
     },
   },
-  { "Bilal2453/luvit-meta",      lazy = true },
-  { "VonHeikemen/lsp-zero.nvim", branch = "v4.x" },
+  { "Bilal2453/luvit-meta", lazy = true },
+  {
+    "VonHeikemen/lsp-zero.nvim",
+    branch = "v4.x",
+    config = function()
+      local lsp_zero = require('lsp-zero')
+
+      local lsp_attach = function(client, bufnr)
+        lsp_zero.default_keymaps({ buffer = bufnr })
+      end
+
+      lsp_zero.extend_lspconfig({
+        lsp_attach = lsp_attach,
+      })
+    end
+  },
   {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     config = function()
