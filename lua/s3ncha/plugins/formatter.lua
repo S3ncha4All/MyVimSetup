@@ -6,6 +6,9 @@ return {
 
         conform.setup({
             formatters_by_ft = {
+                java = { "prettier" },
+                zig = { "prettier" },
+                elixir = { "prettier" },
                 javascript = { "prettier" },
                 typescript = { "prettier" },
                 javascriptreact = { "prettier" },
