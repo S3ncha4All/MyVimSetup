@@ -19,9 +19,11 @@ return {
         lsp_zero.default_keymaps({ buffer = bufnr })
       end
 
-      lsp_zero.extend_lspconfig({
-        lsp_attach = lsp_attach,
-      })
+      -- lsp_zero.extend_lspconfig({
+      --   sign_text = true,
+      --   lsp_attach = lsp_attach,
+      --   capabilities = require('cmp_nvim_lsp').default_capabilities()
+      -- })
     end
   },
   {
@@ -53,6 +55,13 @@ return {
             require("lspconfig")[server_name].setup({})
           end,
           jdtls = function() end,
+          zls = function()
+            require('lspconfig').zls.setup({
+              single_file_support = false,
+              on_attach = function(client, bufnr)
+              end
+            })
+          end,
         }
       })
     end
@@ -66,7 +75,6 @@ return {
     "hrsh7th/nvim-cmp",
     config = function()
       local cmp = require("cmp")
-      -- `:` cmdline setup.
       cmp.setup.cmdline(':', {
         mapping = cmp.mapping.preset.cmdline(),
         sources = cmp.config.sources({
@@ -92,6 +100,7 @@ return {
           end,
         },
         mapping = cmp.mapping.preset.insert({
+          ['C-Space'] = cmp.mapping.complete(),
           ['<CR>'] = cmp.mapping.confirm({ select = false }),
         }),
       })

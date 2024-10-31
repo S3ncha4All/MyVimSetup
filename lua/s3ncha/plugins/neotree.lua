@@ -11,6 +11,16 @@ return {
     config = function()
       require("neo-tree").setup({
         close_if_last_window = true,
+        filesystem = {
+          follow_current_file = {
+            enabled = true,
+          }
+        },
+        buffers = {
+          follow_current_file = {
+            enabled = true,
+          }
+        }
       })
     end
   }
