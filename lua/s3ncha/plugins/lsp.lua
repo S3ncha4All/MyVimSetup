@@ -55,7 +55,7 @@ return {
                     "efm",
                     "sonarlint-language-server",
                     "tailwindcss",
-                    "tsserver",
+                    "ts_ls",
                     "jsonls",
                     "eslint",
                 },
