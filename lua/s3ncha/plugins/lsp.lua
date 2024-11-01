@@ -62,6 +62,13 @@ return {
                         require("lspconfig")[server_name].setup({})
                     end,
                     jdtls = function() end,
+                    zls = function()
+                        require('lspconfig').zls.setup({
+                            single_file_support = false,
+                            on_attach = function(client, bufnr)
+                            end
+                        })
+                    end,
                 }
             })
         end
