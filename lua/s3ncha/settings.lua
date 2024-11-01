@@ -29,3 +29,5 @@ o.showmatch = true          -- When a bracket is inserted, briefly jump to the m
 o.inccommand =
 "split"                     -- When nonempty, shows the effects of :substitute, :smagic, :snomagic and user commands with the :command-preview flag as you type.
 o.termguicolors = true
+o.incsearch = true
+o.scrolloff = 8

@@ -20,6 +20,10 @@ wk.add({
     { "<leader>e",  group = "Edit" },
     { "<leader>eu", function() require("undotree").toggle() end, desc = "Undo Tree",           mode = "n" },
 
+    -- Window [W]
+    { "<leader>w",  group = "Window" },
+    { "<leader>wn", "<cmd>Neotree toggle<cr>",                   desc = "Toggle Neotree",      mode = "n" },
+
     -- Code(Actions) [C]
     { "<leader>c",  group = "Code" },
     { "<leader>cr", function() vim.lsp.buf.rename() end,         desc = "Refactor",            mode = "n" },
