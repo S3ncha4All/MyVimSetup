@@ -31,8 +31,18 @@ return {
         config = function()
             require("mason-tool-installer").setup({
                 ensure_installed = {
+                    "lua_ls",
+                    "zls",
+                    "jdtls",
+                    "elixirls",
+                    "efm",
+                    "tailwindcss",
+                    "ts_ls",
+                    "jsonls",
+                    "eslint",
                     "java-test",
                     "java-debug-adapter",
+                    "sonarlint-language-server",
                 },
             })
         end
