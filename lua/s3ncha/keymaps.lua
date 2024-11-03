@@ -28,6 +28,7 @@ wk.add({
     { "<leader>c",  group = "Code" },
     { "<leader>cr", function() vim.lsp.buf.rename() end,         desc = "Refactor",            mode = "n" },
     { "<leader>ca", function() vim.lsp.buf.code_action() end,    desc = "Actions",             mode = "n" },
+    { "<leader>cf", function() vim.lsp.buf.format() end,         desc = "Format Document",     mode = "n" },
 
     -- GoTo [G]
     { "gr",         function() vim.lsp.buf.references() end,     desc = "GoTo Reference",      mode = "n" },
