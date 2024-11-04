@@ -61,6 +61,9 @@ return {
                     function(server_name)
                         require("lspconfig")[server_name].setup({})
                     end,
+                    efm = function()
+                        require("lspconfig").efm.setup({})
+                    end,
                     jdtls = function() end,
                     zls = function()
                         require('lspconfig').zls.setup({
