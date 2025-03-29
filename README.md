@@ -6,14 +6,12 @@ The setup is not yet completed. (Its a journey)
 
 ## Further steps to do
 - Keymappings
-- telescope customizing
-- Structure Plugins
-- More LS (Typescript, Javascript, ZIG, Elixir)
+- Implement fzf
 
 ## Plugins
 
 ### Essentials 
-- Telescope (Best Fuzzy Finder)
+- fzf (Best Fuzzy Finder)
 - Treesitter (Highlighting for everything)
 - Neotree (Filetree)
 - WhichKey (Helper for Keymaps)
@@ -27,12 +25,12 @@ The setup is not yet completed. (Its a journey)
 
 ### Editor
 - conform (formatter)
-- cmp (autocompletion)
+- blink (autocompletion)
 - autopairs (Better for Braces)
 - gitsigns (Git-Info in Files)
 
 ### Coding
 - mason (package-manager for LSP)
 - LuaLS (LazyDev)
-- nvim-jdtls
+- nvim-java
 - DAP (For debugging)
