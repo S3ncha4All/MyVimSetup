@@ -7,14 +7,14 @@ wk.add({
 
     -- File [F]
     { "<leader>f",  group = "File" },
-    { "<leader>ff", "<cmd>Telescope find_files<cr>",             desc = "Find File",           mode = "n" },
-    { "<leader>fg", "<cmd>Telescope git_files<cr>",              desc = "Find Git-File",       mode = "n" },
-    { "<leader>fl", "<cmd>Telescope live_grep<cr>",              desc = "Grep",                mode = "n" },
+    { "<leader>ff", "<cmd>Files<cr>",                            desc = "Find File",           mode = "n" },
+    { "<leader>fg", "<cmd>GFiles<cr>",                           desc = "Find Git-File",       mode = "n" },
+    { "<leader>fl", "<cmd>RG<cr>",                               desc = "Grep",                mode = "n" },
 
-    { "<leader>fr", "<cmd>Telescope lsp_references<cr>",         desc = "Find Reference",      mode = "n" },
-    { "<leader>fs", "<cmd>Telescope lsp_document_symbols<cr>",   desc = "Find Symbol",         mode = "n" },
-    { "<leader>fi", "<cmd>Telescope lsp_implementations<cr>",    desc = "Find Implementation", mode = "n" },
-    { "<leader>fx", "<cmd>Telescope diagnostics bufnr=0<cr>",    desc = "Find Errors",         mode = "n" },
+    { "<leader>fr", "<cmd>References<cr>",                       desc = "Find Reference",      mode = "n" },
+    { "<leader>fs", "<cmd>DocumentSymbols<cr>",                  desc = "Find Symbols in Document",         mode = "n" },
+    { "<leader>fi", "<cmd>Implementations<cr>",                  desc = "Find Implementation", mode = "n" },
+    { "<leader>fx", "<cmd>Diagnostics<cr>",                      desc = "Show all Diagnostics in Document",         mode = "n" },
 
     -- Edit [E]
     { "<leader>e",  group = "Edit" },

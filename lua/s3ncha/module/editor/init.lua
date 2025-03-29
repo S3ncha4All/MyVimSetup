@@ -1,6 +1,8 @@
 local path = "s3ncha.module.editor."
 
 return {
+    require(path .. "undotree"),
+    require(path .. "fzf"),
     require(path .. "themes"),
     require(path .. "fidget"),
     require(path .. "neotree"),
